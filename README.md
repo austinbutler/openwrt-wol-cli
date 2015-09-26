@@ -14,7 +14,7 @@ Also assumes the first two lines of the router's host file are localhost and the
 
 I find it easier to run the script by calling the shell when using a mobile device. The default shell with Gargoyle is `ash`. 
 
-Requires the "host" parameter, which is the name your router knows the host by. It's fuzzy search, so you can use a partial host and it will match. If you use too fuzzy of a host and it matches multiple, it will exit.
+Requires the "host" parameter, which is the name your router knows the host by or the IP address. It's fuzzy search, so you can use a partial host or IP and it will match. If you use too fuzzy of a host and it matches multiple, it will exit and scold you.
 
 ```
 ash wol.sh HOST
