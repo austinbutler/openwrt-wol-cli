@@ -8,6 +8,8 @@ Nothing else is required to run it aside from what is already installed by defau
 
 Assumes .255 for broadcast IP. You can change this in the script, or suggest I change that from being hardcoded.
 
+Also assumes the first two lines of the router's host file are localhost and the router itself.
+
 ## Running
 
 I find it easier to run the script by calling the shell when using a mobile device. The default shell with Gargoyle is `ash`. 
