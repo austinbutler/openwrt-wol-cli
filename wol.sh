@@ -3,15 +3,15 @@
 #Get device name from parameter
 HOST="$1"
 
+#Get all available hosts from hosts file
+HOSTS=$(tail -n+3 /etc/hosts | awk '{print tolower($2)}' | sed ':a;N;$!ba;s/\n/, /g')
+
 #Test if a host was supplied, exit with error if not
 if [ -z "$HOST" ]; then
   echo "No valid host specified, valid options: $HOSTS"
   echo "You may also use a partial name as long as it produces a single match"
   exit 1
 fi
-
-#Get all available hosts from hosts file
-HOSTS=$(tail -n+3 /etc/hosts | awk '{print tolower($2)}' | sed ':a;N;$!ba;s/\n/, /g')
 
 #Get IP from hostsfile based on hostname
 IP=$(grep -i "$HOST" /etc/hosts | awk '{print $1}')
