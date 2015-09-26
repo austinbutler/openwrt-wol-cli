@@ -14,7 +14,7 @@ if [ -z "$HOST" ]; then
 fi
 
 #Get IP from hostsfile based on hostname
-IP=$(grep -i "$HOST" /etc/hosts | awk '{print $1}')
+IP=$(tail -n+3 /etc/hosts | grep -i "$HOST" | awk '{print $1}')
 
 #Test if the host given matched more than one IP
 if [ -z "$IP" ]; then
