@@ -17,7 +17,11 @@ fi
 IP=$(grep -i "$HOST" /etc/hosts | awk '{print $1}')
 
 #Test if the host given matched more than one IP
-if [ "$(echo "$IP" | wc -l)" -ne 1 ]; then
+if [ -z "$IP" ]; then
+  echo "No hosts matched given host, valid options: $HOSTS"
+  echo "You may also use a partial name as long as it produces a single match"
+  exit 1
+elif [ "$(echo "$IP" | wc -l)" -ne 1 ]; then
   echo "Host specified matched multiple hosts, be more specific!"
   echo "Valid options: $HOSTS"
   exit 1
