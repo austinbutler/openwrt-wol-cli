@@ -39,3 +39,9 @@ Partial version of above host used.
 ```
 ash wol.sh nas
 ```
+
+Last octet used.
+
+```
+ash wol.sh ".3"
+```
