@@ -4,7 +4,7 @@ Script I use when logging in to my router for WoL for hosts in the network.
 
 ## Install
 
-Put the script in /usr/sbin, optionally without the `.sh` extension, then
+Put the script in `/usr/sbin`, optionally without the `.sh` extension, then
 make it executable.
 
 ## Running
